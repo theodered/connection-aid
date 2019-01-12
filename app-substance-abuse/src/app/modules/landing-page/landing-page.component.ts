@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  naviationConfig = [
+    { name: 'Home'},
+    { name: 'Education'},
+    { name: 'Stories'},
+    { name: 'Therapist'},
+    { name: 'Team'},
+    { name: 'About Us'},
+    { name: 'Rehab Center'},
+    { name: 'Contact Us'}
+     
+  ];
+  constructor() {
+   }
 
   ngOnInit() {
   }

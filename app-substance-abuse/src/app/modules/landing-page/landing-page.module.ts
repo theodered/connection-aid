@@ -6,7 +6,7 @@ import { landingPageRouteModule } from './landing-page.routing';
 @NgModule({
   imports: [
     CommonModule,
-    landingPageRouteModule
+    landingPageRouteModule,
   ],
   declarations: [LandingPageComponent]
 })

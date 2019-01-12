@@ -1,26 +1,24 @@
 <div class="pageContainer">
-    <div class="headerContainer">
+        <div class="headerContainer">
         <div class="homeLogo">
-            Logo here !!
+            Connection Aid
         </div>
-        <div class="userName">
+        <div style="display:none" class="userName">
             Hello Dev User
         </div>
         <div class="headerInnerContainer">
-            <div>Home</div>
-            <div>Education</div>
-            <div>Stories</div>
-            <div>Therapist</div>
-            <div>Team</div>
-            <div>About Us</div>
-            <div>Rehab Center</div>
-            <div>Contact Us</div>
+            <ng-container *ngFor="let config of naviationConfig">
+                    <div>{{config.name}}</div>
+            </ng-container>
         </div>
     </div>
 
     <div class="main-container">
         <div class="sideContainer">
-            Hello
+            <p class="sz-D">On-Demand</p>
+            <p class="sz-U">Urgent Care</p>
+            <p class="sz-I">In comfort of your home or work.</p>
+            <button class="get-started-btn">Get started</button>
         </div>
         <div class="imgContainer">
         </div>
