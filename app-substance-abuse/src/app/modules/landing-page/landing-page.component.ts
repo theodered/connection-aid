@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Route } from '@angular/compiler/src/core';
+import { config } from 'rxjs';
 
 @Component({
   selector: 'app-landing-page',
@@ -8,19 +11,27 @@ import { Component, OnInit } from '@angular/core';
 export class LandingPageComponent implements OnInit {
 
   naviationConfig = [
-    { name: 'Home'},
-    { name: 'Education'},
-    { name: 'Stories'},
-    { name: 'Therapist'},
-    { name: 'Team'},
-    { name: 'About Us'},
-    { name: 'Rehab Center'},
-    { name: 'Contact Us'}
-     
-  ];
-  constructor() {
-   }
+    { name: 'Education', link: 'education' },
+    { name: 'Stories', link: 'stories' },
+    { name: 'Therapist', link: 'therapists' },
+    { name: 'Team', link: 'team' },
+    { name: 'About Us', link: 'aboutUs' },
+    { name: 'Rehab Center', link: 'rehabCenter' },
+    { name: 'Contact Us', link: 'contactUs' }
 
+  ];
+  constructor(private router: Router) {
+  }
+
+  navigateTo(config: any) {
+    console.log()
+
+    // if (!config.active) {
+    //   alert("please enable the field")
+    //   return
+    // }
+    this.router.navigate(['/' + config.link])
+  }
   ngOnInit() {
   }
 

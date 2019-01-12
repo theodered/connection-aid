@@ -3,7 +3,7 @@ import { ViewContainerComponent } from "../education/view-container/view-contain
 import { NgModule } from "@angular/core";
 
 const educationRoutes: Routes = [
-    { path: 'education', component: ViewContainerComponent }
+    { path: 'main', component: ViewContainerComponent }
 ]
 
 @NgModule({

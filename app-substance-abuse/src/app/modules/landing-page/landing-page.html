@@ -1,19 +1,13 @@
 <div class="pageContainer">
-        <div class="headerContainer">
-        <div class="homeLogo">
-            Connection Aid
-        </div>
-        <div style="display:none" class="userName">
-            Hello Dev User
-        </div>
-        <div class="headerInnerContainer">
-            <ng-container *ngFor="let config of naviationConfig">
-                    <div>{{config.name}}</div>
-            </ng-container>
-        </div>
-    </div>
 
     <div class="main-container">
+        <div class="side-layout-bar">
+            <ng-container *ngFor="let config of naviationConfig">
+                <div class="side-layout-bar-item" (click)="navigateTo(config)">
+                    <div class="pd-10">{{config.name}}</div>
+                </div>
+            </ng-container>
+        </div>
         <div class="sideContainer">
             <p class="sz-D">On-Demand</p>
             <p class="sz-U">Urgent Care</p>
