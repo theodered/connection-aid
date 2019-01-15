@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ViewContainerComponent } from './view-container/view-container.component';
+import { EducationRoutingModule } from './education.routing';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    EducationRoutingModule
   ],
   declarations: [ViewContainerComponent]
 })

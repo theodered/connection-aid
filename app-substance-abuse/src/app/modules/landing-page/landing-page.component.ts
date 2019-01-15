@@ -13,7 +13,7 @@ export class LandingPageComponent implements OnInit {
   naviationConfig = [
     { name: 'Education', link: 'education' },
     { name: 'Stories', link: 'stories' },
-    { name: 'Therapist', link: 'therapists' },
+    { name: 'Therapist', link: 'therapist' },
     { name: 'Team', link: 'team' },
     { name: 'About Us', link: 'aboutUs' },
     { name: 'Rehab Center', link: 'rehabCenter' },
@@ -24,12 +24,6 @@ export class LandingPageComponent implements OnInit {
   }
 
   navigateTo(config: any) {
-    console.log()
-
-    // if (!config.active) {
-    //   alert("please enable the field")
-    //   return
-    // }
     this.router.navigate(['/' + config.link])
   }
   ngOnInit() {
