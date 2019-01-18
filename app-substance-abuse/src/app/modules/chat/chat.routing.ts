@@ -3,7 +3,7 @@ import { ViewContainerComponent } from "../chat/view-container/view-container.co
 import { NgModule } from "@angular/core";
 
 const chatRoutes: Routes = [
-    { path: 'main', component: ViewContainerComponent }
+    { path: '', component: ViewContainerComponent }
 ]
 
 @NgModule({

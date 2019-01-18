@@ -1,3 +1,82 @@
-<p>
-  view-container works!
-</p>
+<div id="chat-root">
+  <!-- Desktop -->
+  <div class="d-none d-sm-block">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3 border-right">
+          <app-contact-list></app-contact-list>
+        </div>
+        <div class="col-6">
+          <app-chatbox></app-chatbox>
+        </div>
+        <div class="col-3 border-left">
+          <app-contact-details></app-contact-details>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile -->
+  <div class="d-sm-none">
+    <!-- Mobile view 1 -->
+    <div *ngIf="! mobile_toggle">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <app-contact-list></app-contact-list>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile view 2 -->
+    <div *ngIf="mobile_toggle">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-2">
+            <button type="button" class="btn" (click)="mobile_toggle = !mobile_toggle">
+              <i class="material-icons">
+                arrow_back
+              </i>
+            </button>
+          </div>
+          <div class="col-10">
+            <div class="container-fluid">
+              <div class="row border-bottom">
+                <div class="col">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-3 p-2">
+                        <img src="{{contact.thumbnail}}" class="img-fluid rounded-circle">
+                      </div>
+                      <div class="col-9 p-2">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col">
+                              <div class="d-inline h6">{{contact.name}}</div>
+                              <div class="d-inline float-right text-muted">{{contact.status}}</div>
+                            </div>
+                          </div>
+                          <div class="row text-truncate text-muted">
+                            <div class="col">
+                              {{contact.about}}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <app-chatbox></app-chatbox>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
