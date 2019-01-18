@@ -3,7 +3,7 @@ import { ViewContainerComponent } from "../stories/view-container/view-container
 import { NgModule } from "@angular/core";
 
 const storyRoutes: Routes = [
-    { path: 'main', component: ViewContainerComponent }
+    { path: '', component: ViewContainerComponent }
 ]
 
 @NgModule({
