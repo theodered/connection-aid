@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ViewContainerComponent } from './view-container/view-container.component';
-import { rehadRoutingModule } from './rehab.routing';
+import { RehabRoutingModule } from './rehab.routing';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   imports: [
     CommonModule,
-    rehadRoutingModule
+    RehabRoutingModule,
+    OrderModule
   ],
   declarations: [ViewContainerComponent]
 })

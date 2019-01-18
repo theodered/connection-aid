@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ParseDataService } from '../../../parse-data.service'
 
 @Component({
   selector: 'app-view-container',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewContainerComponent implements OnInit {
 
-  constructor() { }
+  rehabs$;
+  orderKey: string = 'name';
+  constructor( private parseData: ParseDataService ) { }
 
   ngOnInit() {
+    this.parseData.getRehabs().then( (results) => this.rehabs$ = JSON.parse(JSON.stringify(results)));
   }
+
+  handleSort = (key: string) => {
+    this.orderKey = key;
+  };
 
 }

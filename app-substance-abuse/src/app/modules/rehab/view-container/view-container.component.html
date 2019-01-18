@@ -1,3 +1,40 @@
-<p>
-  view-container works!
-</p>
+<html>
+  <head><title> 
+    Rehab Centers
+  </title></head>
+  <header>
+    <div class="overlay">
+      <h1>Rehabilitation Centers</h1>
+    </div>
+  </header>
+    
+<body>
+    <div class="column left">
+        <div class="gallery" *ngFor="let rehab of rehabs$ | orderBy: orderKey : false: true">
+          <a target="_blank" href="{{ rehab.image.url }}">
+            <img src="{{ rehab.image.url }}" alt="Cinque Terre">
+          </a>
+          <div class="desc">{{rehab.name}}</div>
+          <div class="desc">{{rehab.Place}}</div>
+        </div>
+    </div>
+    <div class="column right">
+        <h2>
+            Filter
+          </h2>
+      <div class="row top">
+          <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+          <button class="btn" onclick="filterSelection('nature')"> Women </button>
+          <button class="btn" onclick="filterSelection('cars')"> Residential </button>
+          <button class="btn" onclick="filterSelection('people')"> Out Patient </button>
+      </div>
+      <h2>
+          Sort
+        </h2>
+      <div class="row bottom">
+          <button class="btn" ngClick="orderKey = 'name'"> Sort by name </button>
+          <button class="btn" ngClick="orderKey = 'Place'"> Sort by place </button>
+      </div>
+    </div>
+</body>
+</html>
