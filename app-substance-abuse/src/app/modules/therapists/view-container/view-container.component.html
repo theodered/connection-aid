@@ -1,0 +1,31 @@
+<div class="row mg-2">
+
+    <p-menu [model]="sidemenuItems" class="col-2"></p-menu>
+    <!-- chat division -->
+    <div class="col-4">
+        <div>chat with us</div>
+        <div class="chat-box">
+            <div class="row" *ngFor="let message of messages">
+                <div class="col-12">
+                    <div class="received-msg">{{message}}</div>
+                </div>
+                <div class="col-12">
+                    <div class="sent-msg">
+                        Currently this service is not available
+                        <i class="fas fa-exclamation"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="align-center">
+            <input pInputText placeholder="... Type something" [style]="'width: 80%'" type="text" [(ngModel)]="textMsg">
+            <button pButton (click)="sendText()" icon="far fa-share-square"></button>
+        </div>
+        <div class="align-center">
+            Leave a comment
+        </div>
+        <div class="align-center">
+            <textarea pInputTextarea [(ngModel)]="property"></textarea>
+        </div>
+    </div>
+</div>

@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  PARSE_APP_ID: 'YOUR_APP_ID',
-  PARSE_JS_KEY: 'YOUR_JS_KEY',
+  PARSE_APP_ID: 'HcfpHp1JASxMTwXE6TTcHvpggFf0AFsG5ZlkPptj',
+  PARSE_JS_KEY: 'w0PrLk642PthYjIR8lik0gx797iFpfx3iY5Fenp2',
   serverURL: 'https://parseapi.back4app.com'
 };
 
