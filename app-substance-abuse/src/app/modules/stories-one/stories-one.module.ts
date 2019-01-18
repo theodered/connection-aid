@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ViewContainerComponent } from './view-container/view-container.component';
-import { StoryRoutingModule } from './stories.routing';
-import { CardModule } from 'primeng/card';
+import { StoryOneRoutingModule } from './stories.routing';
+import {MDBBootstrapModule} from "angular-bootstrap-md";
 
 @NgModule({
   imports: [
-    CommonModule, StoryRoutingModule, CardModule,
-
+    CommonModule, StoryOneRoutingModule,MDBBootstrapModule
   ],
   declarations: [ViewContainerComponent]
 })
-export class StoriesModule { }
+export class StoriesOneModule { }

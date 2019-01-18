@@ -12,7 +12,8 @@ export class LandingPageComponent implements OnInit {
 
   naviationConfig = [
     { name: 'Education', link: 'education' },
-    { name: 'Stories', link: 'stories' },
+    { name: 'Stories One', link: 'stories-one' },
+    { name: 'Stories Two', link: 'stories-two' },
     { name: 'Therapist', link: 'therapist' },
     { name: 'Team', link: 'team' },
     { name: 'About Us', link: 'aboutUs' },

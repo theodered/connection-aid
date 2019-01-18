@@ -1,5 +1,5 @@
 import { Routes, RouterModule } from "@angular/router";
-import { ViewContainerComponent } from "../stories/view-container/view-container.component";
+import { ViewContainerComponent } from "../stories-one/view-container/view-container.component";
 import { NgModule } from "@angular/core";
 
 const storyRoutes: Routes = [
@@ -10,6 +10,6 @@ const storyRoutes: Routes = [
     exports: [RouterModule],
     imports: [RouterModule.forChild(storyRoutes)]
 })
-export class StoryRoutingModule {
+export class StoryOneRoutingModule {
 
 }
