@@ -14,6 +14,7 @@ export class LandingPageComponent implements OnInit {
     { name: 'Education', link: 'education' },
     { name: 'Stories', link: 'stories' },
     { name: 'Therapist', link: 'therapist' },
+    { name: 'Chat', link: 'chat' },
     { name: 'Team', link: 'team' },
     { name: 'About Us', link: 'aboutUs' },
     { name: 'Rehab Center', link: 'rehabCenter' },

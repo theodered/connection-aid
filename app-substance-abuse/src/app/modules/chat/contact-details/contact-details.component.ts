@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-view-container',
-  templateUrl: './view-container.component.html',
-  styleUrls: ['./view-container.component.css']
+  selector: 'app-contact-details',
+  templateUrl: './contact-details.component.html',
+  styleUrls: ['./contact-details.component.css']
 })
-export class ViewContainerComponent implements OnInit {
-
-  mobile_toggle = true;
+export class ContactDetailsComponent implements OnInit {
 
   contact = {
     'name': 'Karan Dwivedi',
@@ -15,7 +13,6 @@ export class ViewContainerComponent implements OnInit {
     'status': 'Online',
     'about': 'Developer'
   }
-
 
   constructor() { }
 
